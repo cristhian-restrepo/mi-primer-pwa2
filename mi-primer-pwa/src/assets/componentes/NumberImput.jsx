@@ -1,4 +1,4 @@
-import React from 'react'
+import React, {useState} from 'react'
 import PropTypes from 'prop-types'
 import {operaciones} from '../helpers/operaciones';
 import Resultado from './Resultado';
@@ -9,7 +9,7 @@ const NumberImput = () => {
         numero1: 0,
         numero2: 0
     });
-    const {handleChange, suma, numero1, numero2} = operaciones(numeros, setnumeros)
+    const {handleChange, suma, numero1, numero2} = operaciones(numeros, setNumeros)
     
   return (
     <>NumberImput
@@ -17,7 +17,7 @@ const NumberImput = () => {
     <input name='numero1' value={numero1} onChange={handleChange} type="number" />
     <label htmlFor=""> numero2: </label>
     <input name='numero2' value={numero2} onChange={handleChange} type="number" />  
-    <Resultado operacion="suma" calculo={}/>  
+    <Resultado operacion="suma" calculo={suma()}/>  
     </>
   )
 }

@@ -6,8 +6,8 @@ export const operaciones=(numeros, setNumeros)=>{
             ...numeros, 
             [e.target.name]: parseFloat(e.target.value),
         });
+
+    };
         const suma =()=>numero1+numero2;
         return {handleChange, suma, numero1, numero2}
     }
-
-}
